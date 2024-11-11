@@ -113,7 +113,7 @@ const Login: React.FC = () => {
       dispatch(loginSuccess({ user, token }));
 
       alert("Login successful");
-      navigate("/profile"); // Redirect to Home or Dashboard page on success
+      navigate("/"); // Redirect to Home or Dashboard page on success
     } catch (error) {
       if (isAxiosError(error)) {
         setErrorMessage(
