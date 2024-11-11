@@ -37,8 +37,7 @@ import { RootState } from "../store";
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
-  // const user = useSelector((state: RootState) => state.auth.user);
-  const token = useSelector((state: RootState) => state.auth.token);
+  const user = useSelector((state: RootState) => state.auth.user);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
@@ -46,10 +45,10 @@ const Home: React.FC = () => {
         Welcome to the User Registration System
       </h1>
 
-      {token ? (
+      {user ? (
         // If user is logged in, display username and Profile button
         <div className="text-center">
-          <p className="text-lg text-gray-600 mb-6">Hello!</p>
+          <p className="text-lg text-gray-600 mb-6">Hello, {user.email}!</p>
           <button
             onClick={() => navigate("/profile")}
             className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
