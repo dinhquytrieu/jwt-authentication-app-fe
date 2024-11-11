@@ -1,7 +1,8 @@
 import axios, { AxiosInstance, AxiosError } from "axios";
 
 const axiosInstance: AxiosInstance = axios.create({
-  baseURL: "http://localhost:3000", // Replace with your backend URL
+  // baseURL: "http://localhost:3000", // Replace with your backend URL
+  baseURL: "https://jwt-authentication-app-be.onrender.com", // Replace with your backend URL
 });
 
 axiosInstance.interceptors.request.use((config) => {
